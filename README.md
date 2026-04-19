@@ -19,8 +19,18 @@
 
 Теперь нужно сбросить токен в категории <b>Бот</b> и скопировать его.
 
+#### Совсем забыл, обязательно включите все три галочки:
+<img width="1485" height="491" alt="image" src="https://github.com/user-attachments/assets/776ac2dc-2942-457a-ab29-c1e16f91dc4f" />
+
 ## Код
 Создайте python-файл и скачайте библиотеку <b>discord.py</b>
 ```bash
 pip install discord.py
+```
+
+Теперь приступаем к коду, сначала импортируем нужные библиотеки:
+```python
+import discord
+from discord.ext import commands
+import asyncio
 ```
