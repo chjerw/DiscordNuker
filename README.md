@@ -49,9 +49,9 @@ command_prefix="."
 ```
 Далее нужно создать переменные для настройки нюка:
 ```python
-count = 1000
+count = 10
 channel_name = "Nuked by chjerw"
-channel_message = "💣 Nuked by **chjerw** "
+channel_message = "💣 Nuked by **chjerw**"
 ```
 Тут ставьте что хотите!
 
@@ -70,3 +70,21 @@ async def nuke(ctx):
 Логика тут простая, если бот видит что в чате написали <b>!nuke</b>, то он удаляет каждый канал из списка всех каналов (то есть удаляет всё что есть на сервере).
 Потом он создает каналы с названиями <b>channel_name</b> и сообщениями <b>channel_message</b> внутри них.
 Количество создаваемых каналов определяет переменная <b>count</b>.
+
+Под конец, обьявляем боту токен:
+```python
+bot.run("TOKEN")
+```
+
+## Тест
+Я оставил такие же значения переменных, как сверху.
+Теперь запускаем наш код и вводим комманду <b>!nuke</b>
+
+### До
+<img width="1919" height="945" alt="image" src="https://github.com/user-attachments/assets/e75b0eef-b9a7-4822-b421-c8ea9a747707" />
+
+### После
+<img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/1cb3eb9e-005f-4447-ba16-a22667352b22" />
+
+##Заключение
+Вот такой вот вышел проект. По вопросам [пишите](https://t.me/clossedheimer)!
