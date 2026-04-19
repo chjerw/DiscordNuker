@@ -86,5 +86,6 @@ bot.run("TOKEN")
 ### После
 <img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/1cb3eb9e-005f-4447-ba16-a22667352b22" />
 
-##Заключение
-Вот такой вот вышел проект. По вопросам [пишите](https://t.me/clossedheimer)!
+## Заключение
+Вот такой вот вышел проект. 
+#### Есть вопросы? Услуга по лоупрайсу? [Лучше пишите Червю](https://t.me/clossedheimer)!
